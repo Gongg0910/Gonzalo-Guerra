@@ -400,7 +400,7 @@ int main(){
     const int &r2 = i; // ok: can bind const int& to plain int
 } */
 
-// Exercise 2.30:
+// Exercise 2.30: aaaaaaaaaaaaaaaaaaa
 
 
 
@@ -420,7 +420,7 @@ int main(){
 
 
 // Exercise 2.37:
-int main(){
+/* int main(){
     int a = 3, b = 4;
     decltype(a) c = a;   
     decltype(a = b) d = a; 
@@ -428,4 +428,51 @@ int main(){
     cout << d << endl;
 
     return 0;
+} */
+
+
+
+// Exercise 2.39;
+// struct Foo { /* empty */};           // always add semi-colon  ; 
+/* int main(){
+
+    return 0;
+
 }
+ */
+
+/* #include <iostream>
+#include <string>
+#include "Sales_data.h"
+#include "Sales_item.h"
+using namespace std;
+
+int main(){
+    if (data1.bookNo == data2.bookNo) {
+        unsigned totalCnt = data1.units_sold + data2.units_sold;
+        double totalRevenue = data1.revenue + data2.revenue;
+        std::cout << data1.bookNo << " " << totalCnt << " " << totalRevenue << " ";
+        if (totalCnt != 0)
+            std::cout << totalRevenue/totalCnt << std::endl;
+        else
+            std::cout << "(no sales)" << std::endl;
+        return 0; // indicate success
+    } 
+    else { // transactions weren’t for the same ISBN
+        std::cerr << "Data must refer to the same ISBN" << std::endl;
+    return -1; // indicate failure
+}
+}
+ */
+
+
+#ifndef SALES_DATA_H
+#define SALES_DATA_H
+#include <string>
+struct Sales_data {
+    std::string bookNo;
+    unsigned units_sold = 0;
+    double revenue = 0.0;
+};
+#endif
+
