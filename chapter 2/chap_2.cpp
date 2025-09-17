@@ -382,7 +382,7 @@ int main(){
     return 0;
 } */
 
-int main() {
+/* int main() {
     int i = 0;
     int *const p1 = &i; // we can’t change the value of p1; const is top-level
     const int ci = 42; // we cannot change ci; const is top-level
@@ -398,6 +398,34 @@ int main() {
     p2 = &i; // ok: we can convert int* to const int*
     int &r = ci; // error: can’t bind an ordinary int& to a const int object
     const int &r2 = i; // ok: can bind const int& to plain int
-}
+} */
 
-// page 89
+// Exercise 2.30:
+
+
+
+// Exercise 2.36
+/* int main(){
+    int a = 3, b = 4;
+    decltype(a) c = a;
+    decltype((b)) d = a;
+    ++c;
+    ++d;
+
+    cout << c << endl;
+    cout << d << endl;
+
+    return 0;
+} */
+
+
+// Exercise 2.37:
+int main(){
+    int a = 3, b = 4;
+    decltype(a) c = a;   
+    decltype(a = b) d = a; 
+    cout << c << endl;
+    cout << d << endl;
+
+    return 0;
+}
