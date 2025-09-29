@@ -1,6 +1,8 @@
 #include <iostream>
-using namespace std;
+#include <string>
 
+using namespace std;
+using std::string;
 /* int main(){
     string word;
     while(cin >> word){
@@ -35,6 +37,22 @@ using namespace std;
 } */
 
 
+
+/* int main(){
+    string line;
+    while(getline(cin, line)){
+        if(line.empty()){
+            cout << line << " is empty!" << endl;
+        }
+        else {
+            cout << " is not empty yo " << line << endl;
+        }
+
+    }
+    return 0;
+} */
+
+
 /* int main(){
     string line;
     while(getline(cin, line)){
@@ -47,4 +65,90 @@ using namespace std;
     }
     return 0;
 } */
+
+
+/* int main(){
+    string s7(10,'c');
+
+    cout << s7 << endl;
+    return 0;
+} */
+
+
+/* int main() {
+    string st1(10, 'b'), st2 = "a"; // st1 is cccccccccc; st2 is an empty string
+    st1 = st2;
+
+    cout << st1 << endl;
+    return 0;
+} */
+
+
+/* int main() {
+    string str("some string");
+    for (auto c : str) 
+    cout << c << endl;
+    return 0;
+} */
+
+
+/* int main() {
+    string s("Hello World!!!");
+    decltype(s.size()) punct_cnt = 0;
+    for (auto c : s){ 
+        if (ispunct(c)){
+            ++punct_cnt;
+        }
+    } 
+    cout << punct_cnt << " punctuation characters in " << s << endl;
+    return 0;
+} */
+
+
+/* int main() {
+    string s("Hello World!!!");
+    for(auto &c : s){
+        c = toupper(c);
+    }
+    cout << s << endl;
+    return 0;
+} */
+
+
+/* int main() {
+    string s("some string");
+    if (!s.empty()){
+        cout << (s[0] = toupper(s[0])) << endl;
+    } 
+    return 0;  
+} */
+
+
+
+/* int main() {
+    string s("some string");
+    for(decltype(s.size()) i = 0; i != s.size() && !isspace(s[i]); ++i){
+        cout << (s[i] = toupper(s[i]));
+    }
+    return 0;
+} */
+
+
+
+/* int main() {
+    const string hexdigits = "0123456789ABCDEF"; // possible hex digits
+    cout << "Enter a series of numbers between 0 and 15" << " separated by spaces. Hit ENTER when finished: " << endl;
+
+    string result;
+    string::size_type n;
+
+    while(cin >> n){
+        if(n < hexdigits.size()){
+            result += hexdigits[n];
+        }
+    }
+    cout << "Your hex number is: " << result << endl;
+    return 0;
+} */
+
 
