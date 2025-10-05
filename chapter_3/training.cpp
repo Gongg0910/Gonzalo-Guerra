@@ -94,6 +94,7 @@ using std::string;
 
 /* int main() {
     string s("Hello World!!!");
+
     decltype(s.size()) punct_cnt = 0;
     for (auto c : s){ 
         if (ispunct(c)){
@@ -137,7 +138,7 @@ using std::string;
 
 /* int main() {
     const string hexdigits = "0123456789ABCDEF"; // possible hex digits
-    cout << "Enter a series of numbers between 0 and 15" << " separated by spaces. Hit ENTER when finished: " << endl;
+    cout << "Enter a series of numbers between 0 and 15" << " separated by spaces. " << endl;
 
     string result;
     string::size_type n;
@@ -150,5 +151,98 @@ using std::string;
     cout << "Your hex number is: " << result << endl;
     return 0;
 } */
+
+
+
+//Exercise 3.6
+//Exercise 3.7
+
+#include <iostream>
+#include <string>
+
+/* int main() {
+    string b = "Hello World!";
+    cout << "Original string: " << b << endl;
+
+    for(char &c : b){   // if you add &c it changed, but without & it doesn't
+        c = 'X';
+    }
+    cout << "Modified string: " << b << endl;
+
+    return 0;
+} */
+
+
+
+// Exercise 3.8 
+
+/* int main() {
+    string b = "Hello World!";
+    cout << "Original string: " << b << endl;
+
+    string::size_type index = 0;
+    while(index < b.size()){
+        b[index] = 'X';
+        ++index;
+    }
+    cout << "Modified string: " << b << endl;
+
+    return 0;
+} */
+
+
+/* int main() {
+    string b = "Hello World!";
+    cout << "Original string: " << b << endl;
+
+    for(string::size_type index = 0; index < b.size() -7; index++){
+        b[index] = 'X';
+    }
+
+    cout << "Modified string: " << b << endl;
+    return 0;
+} */
+
+
+// Exercise 3.9 
+
+/* int main() {
+    string s;
+    cout << s[0] << endl;
+    return 0;
+} */
+// Is not valid because it is not defined behavior and is empty string and cause error 
+
+
+// Exercise 3.10 
+/* #include <cctype>
+
+int main() {
+    string b = "Hello World!!!";
+    string result;
+
+    for(char c : b){
+        if(!ispunct(c)){
+            result += c;
+        }
+    }
+    cout << result << endl; 
+
+    return 0;
+} */
+
+
+// Exercise 3.11 
+// valid and the type of c is const char & 
+
+
+#include <vector> 
+
+
+
+
+
+
+
 
 
