@@ -238,11 +238,52 @@ int main() {
 
 #include <vector> 
 
+// Exercise 3.12 
+
+// (a) W
+// (b) L
+// (c) W
+
+// Exercise 3.13 
+
+// (a) 0                                    w
+// (b) has ten elements with value 0        w
+// (c) 10 elements with value 42            w
+// (d) has one element with value 10        w
+// (e) two elements wint value 10 and 42    w
+// (f) has ten elements                     L   1 element with a value of "10"
+// (g) has ten elements with value of "hi"  w
 
 
+/* int main(){
+    vector<int> v2;
+    for(int i=0; i != 100; i++){
+        v2.push_back(i);
+    }
+
+    for(int b : v2){
+        cout << b << " ";
+    }
+
+    return 0; 
+} */
 
 
+int main(){
+    string word;
+    vector<string> text;
 
+    while(getline(cin, word)){
+        text.push_back(word);
+    }
+
+    cout << endl;
+
+    for(string &abc : text){
+        cout << "Print afterward: " << abc;
+    }
+    return 0;
+}
 
 
 
