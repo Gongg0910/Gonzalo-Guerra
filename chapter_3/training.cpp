@@ -269,7 +269,35 @@ int main() {
 } */
 
 
-int main(){
+
+// Exercise 3.14 
+
+// integer
+/* int main() {
+    vector<int> numbers;
+    int number;
+
+    cout << "Enter a sequence of integers: " << endl;
+
+    while(cin >> number) {
+        numbers.push_back(number);
+    }
+
+    cout << "You entered the following numbers:" << endl;
+    for (int num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+} */
+
+
+
+// Exercise 3.15
+
+// string (on my own)
+/* int main(){
     string word;
     vector<string> text;
 
@@ -283,7 +311,55 @@ int main(){
         cout << "Print afterward: " << abc;
     }
     return 0;
+} */
+
+
+// ai string  
+/* int main() {
+    vector<string> sentences;
+    string words;
+
+    cout << "Enter a sequence of words: " << endl;
+
+    while (getline(cin, words)) {
+        sentences.push_back(words);
+    }
+
+    cout << endl;
+
+    cout << "You entered the following words:" << endl;
+    for (const string& result : sentences) {
+        cout << result << " ";
+    }
+    cout << endl;
+
+    return 0;
+} */
+
+
+
+/* int main(){
+    vector<int> v{1,2,3,4,5,6,7,8,9};
+    for (auto &i : v){
+        i *= i;
+    }
+    for (auto i : v){ 
+        cout << i << " ";
+    }
+    cout << endl;
+    return 0;
+} */
+
+
+int main() {
+    vector<unsigned> scores(11, 0);
+    unsigned grade;
+    while (cin >> grade) { 
+        if (grade <= 100){
+            cout << (++scores[grade/10]) << endl; 
+        }
+    }
+    
+    return 0;
 }
-
-
 
