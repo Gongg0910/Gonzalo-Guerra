@@ -338,7 +338,7 @@ int main() {
 
 
 
-/* int main(){
+int main(){
     vector<int> v{1,2,3,4,5,6,7,8,9};
     for (auto &i : v){
         i *= i;
@@ -348,10 +348,10 @@ int main() {
     }
     cout << endl;
     return 0;
-} */
+}
 
 
-int main() {
+/* int main() {
     vector<unsigned> scores(11, 0);
     unsigned grade;
     while (cin >> grade) { 
@@ -361,5 +361,5 @@ int main() {
     }
     
     return 0;
-}
+} */
 
