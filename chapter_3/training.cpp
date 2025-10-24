@@ -338,7 +338,7 @@ int main() {
 
 
 
-int main(){
+/* int main(){
     vector<int> v{1,2,3,4,5,6,7,8,9};
     for (auto &i : v){
         i *= i;
@@ -348,7 +348,7 @@ int main(){
     }
     cout << endl;
     return 0;
-}
+} */
 
 
 /* int main() {
@@ -362,4 +362,15 @@ int main(){
     
     return 0;
 } */
+
+
+int main(){
+    vector<int> ivec;
+    for (decltype(ivec.size()) y = 0; y != 10; y++){
+        ivec.push_back(y);
+        
+    }
+    cout << ivec.size() << endl;
+    return 0;
+}
 
