@@ -307,12 +307,12 @@ int main() {
 
     cout << endl;
 
-    for(string &abc : text){
+    for(string& abc : text){
         cout << "Print afterward: " << abc;
     }
     return 0;
-} */
-
+}
+ */
 
 // ai string  
 /* int main() {
@@ -359,12 +359,13 @@ int main() {
             cout << (++scores[grade/10]) << endl; 
         }
     }
+    cout << scores.size() << endl;
     
     return 0;
-} */
+}
+ */
 
-
-int main(){
+/* int main(){
     vector<int> ivec;
     for (decltype(ivec.size()) y = 0; y != 10; y++){
         ivec.push_back(y);
@@ -372,5 +373,45 @@ int main(){
     }
     cout << ivec.size() << endl;
     return 0;
-}
+} */
 
+/* int main(){
+    string words;
+    vector<string> sentences;
+
+    while(getline(cin, words)){
+        sentences.push_back(words);
+    }
+
+
+    return 0;
+} */
+
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cctype>
+
+int main() {
+    vector<string> sentences;
+    string word;
+    while (getline(cin, word)) {
+        sentences.push_back(word);
+    }
+
+    for (string& first : sentences) {
+        for (char& second : first) {
+            second = toupper(second);
+        }
+    }
+
+    for (vector<string>::size_type i = 0; i < sentences.size(); ++i) {
+        cout << sentences[i] << " ";
+        if ((i + 1) % 8 == 0) {
+            cout << endl;
+        }
+    }
+    cout << endl;
+    return 0;
+}
