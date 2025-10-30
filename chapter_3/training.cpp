@@ -408,9 +408,7 @@ int main() {
 
     for (vector<string>::size_type i = 0; i < sentences.size(); ++i) {
         cout << sentences[i] << " ";
-        if ((i + 1) % 8 == 0) {
-            cout << endl;
-        }
+        
     }
     cout << endl;
     return 0;
