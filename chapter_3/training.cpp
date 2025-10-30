@@ -388,7 +388,8 @@ int main() {
 } */
 
 
-#include <iostream>
+//Exercise
+/* #include <iostream>
 #include <vector>
 #include <string>
 #include <cctype>
@@ -412,4 +413,71 @@ int main() {
     }
     cout << endl;
     return 0;
-}
+} */
+
+
+
+/* int main(){
+    string s("Some string"); */
+
+    /* if(s.begin() != s.end()){
+        auto it = s.begin();
+        *it = toupper(*it);
+        cout << s << endl;
+    } */
+/* 
+    for(auto it = s.begin(); it != s.end() && !isspace(*it); it++){
+        *it = toupper(*it);
+    }
+    cout << s << endl;
+    vector<string>::const_iterator it3;
+    return 0;
+}    */
+
+
+/* int main(){
+    int dim = 5;
+
+    for(int i = 0; i < dim; i++){
+        for(int j = 0; j < dim; j++){
+            if(i == dim/2 && j == dim/2){
+                cout << "0 ";
+            }
+            else {
+                if(i == 0 || i == dim - 1 || j == 0 || j == dim -1){
+                    cout << "X ";
+                }
+                else {
+                   cout << "- "; 
+                }
+            }
+        }
+        cout << "\n";
+    }
+    return 0;
+} */
+
+
+/* int main(){
+    int dim = 5;
+
+    for(int i = 0; i < dim; i++){
+        for(int j = 0; j < dim; j++){
+            if(i == 0 || i == dim -1 || i == dim -j -1){
+                cout << "X ";
+            }
+            else {
+                cout << "- ";
+            }
+        }
+        cout << "\n";
+    }
+    return 0;
+} */
+
+
+
+
+
+
+
